@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-
+google.generativeai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
 app = Flask(__name__)
 CORS(app)
 
@@ -42,7 +42,6 @@ def analyze():
 
 if __name__ == '__main__':
     # Validate environment variables
-    if not os.getenv('YOUR_REQUIRED_ENV_VAR'):
-        raise ValueError('Missing required environment variable: YOUR_REQUIRED_ENV_VAR')
-    
-    app.run()
+    if not os.getenv('GOOGLE_API_KEY'):
+    raise ValueError('Missing required environment variable: GOOGLE_API_KEY')
+     app.run()
