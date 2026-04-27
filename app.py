@@ -45,4 +45,4 @@ if __name__ == '__main__':
          if not os.getenv('GOOGLE_API_KEY'):
               raise ValueError('Missing required environment variable: GOOGLE_API_KEY')
     
-         app.run()
+         app.run(host='0.0.0.0', port=5000)
