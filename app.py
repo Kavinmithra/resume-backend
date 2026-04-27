@@ -43,5 +43,6 @@ def analyze():
 if __name__ == '__main__':
     # Validate environment variables
     if not os.getenv('GOOGLE_API_KEY'):
-    raise ValueError('Missing required environment variable: GOOGLE_API_KEY')
-     app.run()
+        raise ValueError('Missing required environment variable: GOOGLE_API_KEY')
+    
+    app.run()
